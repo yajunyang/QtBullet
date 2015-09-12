@@ -11,6 +11,8 @@ greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 TARGET = 01Vessel
 TEMPLATE = app
 
+DESTDIR = $$_PRO_FILE_PWD_/build
+
 LIBS +=  -L"$$PWD/../lib"  -L"D:/Program/LeapSDK/lib/x86"
 LIBS += -lglu32 -lLeap -lVegalib  -lBullet
 
@@ -53,3 +55,7 @@ INCLUDEPATH += D:/Program/LeapSDK/include \
 
 # DISABLE FEW WARNINGS
 #QMAKE_CXXFLAGS += -Wno-unused-variable -Wno-unused-parameter -Wno-ignored-qualifiers
+
+OTHER_FILES += \
+    demo/demo1.jpg \
+    demo/demo2.jpg
