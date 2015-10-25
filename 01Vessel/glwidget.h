@@ -42,6 +42,8 @@ protected:
     void mousePressEvent(QMouseEvent *);
     void mouseMoveEvent(QMouseEvent *);
     void mouseReleaseEvent(QMouseEvent *);
+    void keyPressEvent(QKeyEvent *);
+
     ////////////////////////////////////////////////////////////
     /// \brief camera and light
     /// Public variables

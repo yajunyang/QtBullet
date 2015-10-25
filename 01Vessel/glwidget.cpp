@@ -51,7 +51,6 @@ GLWidget::GLWidget(QWidget *parent) :
 
 GLWidget::~GLWidget()
 {
-    qDebug("Deconstructor");
     free(d_displacement);
     free(uSecondary);
     free(d_initposition);
@@ -420,4 +419,14 @@ void GLWidget::mouseMoveEvent(QMouseEvent *e)
 void GLWidget::mouseReleaseEvent(QMouseEvent *)
 {
     g_leftButton = g_MidButton = g_rightButton = 0;
+}
+
+void GLWidget::keyPressEvent(QKeyEvent *e)
+{
+    if(e->key() == Qt::Key_F){
+        if(isFullScreen()){
+            showNormal();
+        }else
+            showFullScreen();
+    }
 }
